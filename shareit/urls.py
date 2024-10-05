@@ -24,6 +24,8 @@ from home.views import *
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('handle/', HandelFileUpload.as_view()),
+    path('', home),
+    path('download/<uid>/' ,download),
 ]
 
 

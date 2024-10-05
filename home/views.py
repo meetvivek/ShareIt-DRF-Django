@@ -4,6 +4,12 @@ from rest_framework.response import Response
 from .serializers import *
 # Create your views here.
 
+def home(request):
+    return render(request, 'home.html')
+
+def download(request , uid):
+    return render(request , 'download.html' , context = {'uid' : uid})
+
 class HandelFileUpload(APIView):
 
     def post(self, request):
