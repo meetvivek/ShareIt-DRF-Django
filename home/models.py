@@ -5,7 +5,8 @@ from statistics import mode
 import os
 
 class Folder(models.Model):
-    uid = models.UUIDField(primary_key=True, editable=False, default=uuid4.uuid)
+    # uid = models.UUIDField(primary_key=True, editable=False, default=uuid4.uuid)
+    uid = models.UUIDField(primary_key=True, editable=False, default=uuid4)
     created_at = models.DateTimeField(auto_now=True)
 
 def get_upload_path(instance, filename):
